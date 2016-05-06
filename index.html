@@ -1,0 +1,24 @@
+<html>
+<head>
+	<title>Session 10 Assignment 2</title>
+	<meta charset="UTF-8" />
+	<script src="js/angular.min.js" type="text/javascript">
+	</script>
+	<script type="text/javascript">
+		angular.module('numFilter',[])
+		.controller('FilterController',['$scope', function($scope){
+			$scope.value = 4.557693;
+		}]);
+	</script>
+	<!-- Angular Script Block Ends -->
+	<link rel="stylesheet" href="css/style.css">
+	<!-- CSS Block Ends -->
+</head>
+<body ng-app="numFilter">
+	<h2>Reduce the number 4.557693 to 2 decimal places using Number Filter.</h2>
+	<div ng-controller="FilterController">
+	  <p>Value without Number filter = <strong>{{value}}</strong></p>
+	  <p>Value with Number filter = <strong>{{value | number:2 }}</strong></p>
+	</div>
+</body>
+</html>
